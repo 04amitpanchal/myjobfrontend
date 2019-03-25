@@ -1,0 +1,18 @@
+<div class="container-fluied">
+    <div class="header">
+      <app-restaurent></app-restaurent>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4" *ngFor="let item of arr">
+          <div class="thumbnail" >
+            <img src='http://localhost:3000/images/{{item.dish_img}}' >
+            <div class="caption">
+              <h3>{{item.dish_id}}</h3>
+              <p>{{item.dish_name}}</p>
+              <p>{{item.dish_price}}</p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

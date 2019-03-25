@@ -1,0 +1,168 @@
+
+
+
+<section>
+  <div class="block no-padding  gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="inner2">
+            <div class="inner-title2">
+              <h3>Register</h3>
+              <span>Keep up to date with the latest news</span>
+            </div>
+            <div class="page-breacrumbs">
+              <ul class="breadcrumbs">
+                <!-- <li><a [routerLink]="['']" routerLinkActive="router-link-active"  title="">Home</a></li> -->
+                <!-- <li><a href="#" title="">Pages</a></li>
+                <li><a href="#" title="">Register</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="block remove-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="account-popup-area signup-popup-box static">
+            <div class="account-popup">
+              <h3>Sign Up</h3>
+              <span>Lorem ipsum dolor sit amet consectetur adipiscing elit odio duis risus at lobortis ullamcorper</span>
+              <!-- <div class="select-user">
+                <span>Candidate</span>
+                <span>Employer</span>
+              </div> -->
+              <!-- <form > -->
+                <!-- <table class="table"> -->
+                  <div class="cfield"  >
+                      <input type="text" style="border-radius: 10px;" placeholder="Company Name" [(ngModel)]="company_name" />
+                      <!-- <i class="la la-user"></i> -->
+                    </div>
+                    <div class="cfield">
+                        <input type="password" style="border-radius: 10px;" placeholder="********" [(ngModel)]="password"/>
+                        <!-- <i class="la la-key"></i> -->
+                      </div>
+                  <div class="cfield">
+                      <!-- <input id="" type="email" style='border-radius: 10px;' placeholder=" Company Email" [(ngModel)]="company_web"/> -->
+                      <!-- <form class="example-form"> -->
+                         <mat-form-field class="example-full-width " style="border:gray !important;">
+                          <input type="email" style="float: left !important;
+                          width: 100% !important;
+                          background: no-repeat !important;
+                          margin: 0 !important;
+                          font-family: Open Sans !important;
+                          font-size: 13px !important;
+                          color: #474747 !important;
+                          padding: 16px 45px 16px 15px !important;
+                          border: gray !important;"  matInput placeholder="Email" [formControl]="emailFormControl"
+                                 [errorStateMatcher]="matcher" class="cfield">
+                          <!-- <mat-hint>Errors appear instantly! </mat-hint> -->
+                          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                          </mat-error>
+                          <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                          </mat-error>
+                        </mat-form-field>
+                      <!-- </form> -->
+
+                      <!-- <i class="la la-envelope-o"></i> -->
+                    </div>
+                    <div class="cfield">
+                        <input name="email"  type="email" style='border-radius: 10px;' placeholder="Personal Email" [(ngModel)]="rec_id"/>
+                        <!-- <i class="la la-envelope-o"></i> -->
+                      </div>
+
+                      <div class="cfield">
+                          <textarea type="text" style='border-radius: 10px;' placeholder=" Company Address" [(ngModel)]="adderess"></textarea>
+                          <!-- <i class="la la-envelope-o"></i> -->
+                        </div>
+
+
+                      &nbsp;
+                <div class="dropdown-field">
+                  <select data-placeholder="Please Select Specialism" class="chosen" style="float:left;
+                  width: 100%;
+                   position: relative;
+                   float: left;
+                   width: 100%;
+                   background: no-repeat;
+                   border: none;
+                   font-size: 15px;
+                   color: #888888;
+                   margin: 0;
+                   padding: 0 70px 0 30px;
+                   height: 61px;
+                   line-height: 61px;
+                   background-color: #FFF;
+                   -webkit-border-radius: 8px;
+                   -moz-border-radius: 8px;
+                   -ms-border-radius: 8px;
+                   -o-border-radius: 8px;
+                   border-radius: 8px;
+                   border:2px solid gray;" [(ngModel)]="company_type">
+                    <!-- <option value="x" selected>Choose Your Field</option> -->
+                    <option>Web Development</option>
+                    <option>Web Designing</option>
+                    <option>Art & Culture</option>
+                    <option>Reading & Writing</option>
+                  </select>
+                </div>
+                <!-- height:100px;width:150px; -->
+                  <div class="col-lg-12">
+                    <p>Max file size is 1MB, Minimum dimension: 270x210 And Suitable files are .jpg & .png</p>
+                    <div class="upload-portfolio">
+                      <div class="uploadbox">
+                        <label for="file-upload" class="custom-file-upload">
+                           <i class="la la-cloud-upload"></i> <span>Upload Image</span>
+                       </label>
+                       <input id="file-upload" (change)="onChange($event)" [(ngModel)]="rec_photo" type="file" style="display: none;" />
+                      </div>
+                    </div>
+                  </div>
+                <!-- </div> -->
+
+
+
+                <!-- <div  class="imageshow" id="uploadshowimg" style="border-radius: 50%;">
+                    <img  alt="">
+                  </div>
+
+                  <br>
+                    <span class="btn btn-primary btn-file">
+                      <mat-icon>
+                              cloud_upload
+                      </mat-icon>
+                      <input type="file" (change)="onChange($event)" [(ngModel)]="rec_photo"><br>&nbsp;Upload
+                    </span> -->
+                <!-- <div class="cfield">
+                  <input type="text" placeholder="Phone Number" />
+                  <i class="la la-phone"></i>
+                </div> -->
+                &nbsp;
+                <br>
+                <button type="submit" class="signup"(click)="onsignuprec()">Signup</button>
+              <!-- </table> -->
+                <!-- </form> -->
+              <div class="extra-login">
+                <span>Or</span>
+                <div class="login-social">
+                  <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
+                  <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- SIGNUP POPUP -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

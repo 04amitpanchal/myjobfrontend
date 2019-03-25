@@ -1,0 +1,42 @@
+<form (ngSubmit)="addForm(f)" #f="ngForm">
+  <div class="container">
+  <div class="form-group">
+    <label for="email">Email</label>
+  <input type="text"
+   id="email" email required
+   placeholder="email"
+    class="form-control"
+     [(ngModel)]="email"
+     name="email"
+     #emailId1="ngModel"
+   >
+
+</div>
+<div [hidden]="emailId1.valid || emailId1.untouched" >
+
+<div class="alert alert-danger">
+Email is invalid
+</div>
+
+<div  class="alert alert-danger">
+    Email is required
+    </div>
+</div>
+
+
+<div class="form-group">
+    <label for="fname">password</label>
+  <input type="text" placeholder="First Name" class="form-control" [(ngModel)]="fname" name="fname">
+</div>
+
+<div class="form-group">
+    <button type="submit" class="btn btn-primary" [disabled]="!f.valid" (click)="ons()">Submit</button>
+</div>
+<!-- [disabled]="!f.valid" -->
+<hr>
+<h2>{{email}}</h2>
+<h2>{{fname}}</h2>
+</div>
+
+</form>
+<button (click)='onadd()'>add</button>

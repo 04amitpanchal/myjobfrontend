@@ -1,0 +1,48 @@
+<div class="container-fluied">
+  <table>
+    <tr>
+      <td>
+        id
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="id">
+      </td>
+    </tr>
+    <tr>
+        <td>
+          name
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="name">
+        </td>
+      </tr>
+      <tr>
+          <td>
+            price
+          </td>
+          <td>
+            <input type="number" [(ngModel)]="price">
+          </td>
+        </tr>
+        <tr>
+            <td>
+              mfg
+            </td>
+            <td>
+              <input type="text" [(ngModel)]="mfg">
+            </td>
+          </tr>
+          <tr>
+              <td>
+                image
+              </td>
+              <td>
+                <input type="file" (click)="onChange($event)">
+              </td>
+            </tr>
+  </table>
+  <div class="col-md-6">
+    <button class="btn btn-lg btn-primary form-control" (click)="onadd()" >ADD</button>
+</div>
+
+</div>

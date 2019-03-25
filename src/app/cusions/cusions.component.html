@@ -1,0 +1,69 @@
+<div class="container" >
+
+  <div class="row" >
+    <ul class=" navbar-nav">
+      <li *ngFor="let item of arr">
+        <button type="button" class="list-group-item" (click)="onClick(item.cusions_name)" style="font-size: 24px;">{{item.cusions_name}}</button>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="row" >
+    <div class="col-md-8">
+      <div class="row">
+        <div *ngFor="let item of arr1,let i=index" class="col-sm-6 col-md-4">
+          <button type="button" class="list-group-item" (click)="onadd(item,i)">
+            <div class="thumbnail">
+              <img src="http://localhost:3000/images/{{item.dish_img}}" alt="...">
+              <div class="caption">
+
+                <h4>{{item.dish_name}}</h4>
+
+                <h4>Price : {{item.dish_price}}</h4>
+
+        .      </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3" style="background-color: whitesmoke;">
+      <div class="row"  >
+          <h3>Your Bill : </h3>
+
+      </div>
+      <table class="table" style="background-color: whitesmoke;">
+        <th></th>
+        <th>Name</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <tr *ngFor="let item of bill;let i=index">
+          <td><img src="http://localhost:3000/images/{{item.dish_img}}" alt="..." style="height: 30px;width:30px;border-radius: 20px;"></td>
+          <td>{{item.dish_name}}</td>
+          <td>
+            <select [(ngModel)]="qty[i]" (change)="ondel(item,i)">
+              <option *ngFor="let item of qtydrop">{{item.dish_id}}</option>
+           </select>
+         </td>
+         <td [(ngModel)]="price[i]">
+          {{price[i]}}
+        </td>
+          <td>
+            <button type="button" class="btn btn-default" aria-label="Left Align" (click)="onDelete(i)">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+            </button>
+        </td>
+
+        </tr>
+      </table>
+      <div class="row" >
+          <h1>Total : {{tamt}}</h1>
+          <button *ngIf="bill.length>0" class="btn btn-primary"(click)="onClickPayment()" >Generate bill</button>
+          &nbsp;
+          &nbsp;
+          <button class="btn btn-primary" (click)="onpast(id)">Past order</button>
+      </div>
+    </div>
+  </div>
+</div>

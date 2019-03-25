@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <table class="table">
+    <tr>
+      <td>
+        Email-id
+      </td>
+      <td>
+        <input type="email" placeholder="Email-id" [(ngModel)]="email_id">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        password
+      </td>
+      <td>
+        <input type="password" placeholder="password" [(ngModel)]="password">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="file" (change)="onChange($event)">
+      </td>
+    </tr>
+    <img mat-car-image src="" alt="">
+    <tr>
+      <td>
+        <button class="btn btn-warning" (click)="onlogin()">
+          Log-in
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
