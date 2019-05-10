@@ -21,6 +21,7 @@ export class RecProfileForEmpComponent implements OnInit {
  selectedFile:File=null;
  id:string;
  rec:Adminclass[]=[];
+ com_desc:string;
    constructor(private updaterec:UpdaterecService,
     private _route:Router,
     private _aroute:ActivatedRoute,
@@ -60,6 +61,7 @@ export class RecProfileForEmpComponent implements OnInit {
             this.rec_photo=data[0].rec_photo;
             this.company_type=data[0].company_type;
             this.adderess=data[0].adderess;
+            this.com_desc=data[0].com_desc;
 
           }
         );

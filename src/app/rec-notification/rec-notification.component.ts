@@ -31,7 +31,7 @@ export class RecNotificationComponent implements OnInit {
   fk_res_id:number;
   en_id:number;
   res_staus:string;
-  res_desc:string;
+  res_desc:string="nothing";
   id:number;
   res_status:string;
   rn_id:number;
@@ -116,31 +116,61 @@ msg:string;
   onAccept()
   {
     this.res_status="Accept";
-  this.addresponse.addResponse(new ResponseClass(this.res_id,this.fk_apply_id,"Accept","Nice")).subscribe(
-    (data:any)=>{
-      console.log(data);
-      //alert("Succfully Added Response Data");
 
-        // this.id=this._aroute.snapshot.params['id'];
-        // this.id=localStorage
-        // console.log(this.id);
-          this._getResponseByApplyId.getResponseByApplyId(this.fk_apply_id).subscribe(
-            (data:any[])=>{
-              console.log(data);
-              this.res_id=data[0].res_id;
-              // this.fk_apply_id=data[0].fk_apply_id;
-              // this.res_status=data[0].res_status;
-              // this.res_desc=data[0].res_desc;
+    this.addresponse.addResponse(new ResponseClass(this.res_id,this.fk_apply_id,this.res_status)).subscribe(
+      (data:any)=>{
+        console.log(data);
+        //alert("Succfully Added Response Data");
 
-              this.fk_res_id=this.res_id
-              this.addEmpNotification.addEmpNotification(new empNotification(this.en_id,this.fk_res_id,this.fk_apply_id,this.fk_job_id,this.fk_emp_id)).subscribe(
-                (data:any[])=>{
-                  console.log(data);
-                });
-          });
-    });
+          // this.id=this._aroute.snapshot.params['id'];
+          // this.id=localStorage
+          // console.log(this.id);
+            this._getResponseByApplyId.getResponseByApplyId(this.fk_apply_id).subscribe(
+              (data:any[])=>{
+                console.log(data);
+                this.res_id=data[0].res_id;
+                // this.fk_apply_id=data[0].fk_apply_id;
+                // this.res_status=data[0].res_status;
+                // this.res_desc=data[0].res_desc;
+
+                this.fk_res_id=this.res_id
+                this.addEmpNotification.addEmpNotification(new empNotification(this.en_id,this.fk_res_id,this.fk_apply_id,this.fk_job_id,this.fk_emp_id)).subscribe(
+                  (data:any[])=>{
+                    console.log(data);
+                  });
+            });
+      });
 
   }
 
+  onReject()
+  {
+    this.res_status="Reject";
+
+    this.addresponse.addResponse(new ResponseClass(this.res_id,this.fk_apply_id,this.res_status)).subscribe(
+      (data:any)=>{
+        console.log(data);
+        //alert("Succfully Added Response Data");
+
+          // this.id=this._aroute.snapshot.params['id'];
+          // this.id=localStorage
+          // console.log(this.id);
+            this._getResponseByApplyId.getResponseByApplyId(this.fk_apply_id).subscribe(
+              (data:any[])=>{
+                console.log(data);
+                this.res_id=data[0].res_id;
+                // this.fk_apply_id=data[0].fk_apply_id;
+                // this.res_status=data[0].res_status;
+                // this.res_desc=data[0].res_desc;
+
+                this.fk_res_id=this.res_id
+                this.addEmpNotification.addEmpNotification(new empNotification(this.en_id,this.fk_res_id,this.fk_apply_id,this.fk_job_id,this.fk_emp_id)).subscribe(
+                  (data:any[])=>{
+                    console.log(data);
+                  });
+            });
+      });
+
+  }
 
 }

@@ -1,6 +1,9 @@
 <div class="responsive-header">
   <div class="responsive-menubar">
-    <div class="res-logo"><a href="index.html" title=""><img src="../../assets/uitemplate/images/resource/logo.png" alt="" /></a></div>
+      <div class="logo">
+          <a  title=""><span style="font-size: 40px;color: white;font-family:cursive;">My Job</span><span style="font-size: 20px;color: white;font-family:cursive;">.com</span></a>
+        </div><!-- Logo -->
+
     <div class="menu-resaction">
       <div class="res-openmenu">
         <img src="../../assets/uitemplate/images/icon.png" alt="" /> Menu
@@ -76,6 +79,9 @@
               </li> -->
             </ul>
           </li>
+          <ul>
+            <li><a [routerLink]="['/contactusforemp']" routerLinkActive="router-link-active"  title="">Contact Us</a></li>
+          </ul>
           <!-- <li class="menu-item-has-children">
             <a href="#" title="">Blog</a>
             <ul>
@@ -122,9 +128,10 @@
 <header class="stick-top">
   <div class="menu-sec">
     <div class="container">
-      <div class="logo">
-        <a href="index.html" title=""><img src="../../assets/uitemplate/images/resource/logo.png" alt="" /></a>
-      </div><!-- Logo -->
+        <div class="logo">
+            <a  title=""><span style="font-size: 40px;color: white;font-family:cursive;">My Job</span><span style="font-size: 20px;color: white;font-family:cursive;">.com</span></a>
+          </div><!-- Logo -->
+
       <div class="btns-profiles-sec">
         <span><img src="http://localhost:3000/images/empPhotoes/{{emp_photo}}" height="50px;width:50px;" alt="" /> <i class="la la-angle-down"></i></span>
         <ul>
@@ -140,16 +147,25 @@
           <li>
             <a [routerLink]="['/recruiterprofile']" routerLinkActive="router-link-active"  title="">Home</a>
 
+
+
+          </li>
+          <li>
+            <a [routerLink]="['/jobsforemp']" routerLinkActive="router-link-active"  title="">Jobs</a>
           </li>
           <li class="menu-item-has-children">
             <a  title="">Companies</a>
             <ul>
               <li><a (click)="relatedCompany()" routerLinkActive="router-link-active" title="">Related Company</a></li>
             </ul>
+
           </li>
+          <li><a [routerLink]="['/uploadCv']" routerLinkActive="router-link-active"  title="">Upload CV</a></li>
+          <li><a [routerLink]="['/AppliedJobs']" routerLinkActive="router-link-active"  title="">Applied Jobs</a></li>
+          <li><a [routerLink]="['/contactusforemp']" routerLinkActive="router-link-active"  title="">Contact Us</a></li>
           <li><a title="" [routerLink]="['/empnotification']" routerLinkActive="router-link-active" ><mat-icon title="Job-Alerts">notifications</mat-icon></a></li>
 
-        </ul>
+          </ul>
       </nav><!-- Menus -->
     </div>
   </div>
@@ -181,7 +197,7 @@
                   <div class="action-inner style2">
                     <div class="download-cv">
                         <!-- <a title="" >logout</a> -->
-                      <a href="#" title="">Download CV <i class="la la-download"></i></a>
+                      <!-- <a href="#" title="">Download CV <i class="la la-download"></i></a> -->
 
                      </div>
                     <a href="#" title=""><i class="la la-map-marker"></i>{{city}} / {{state}} / {{country}}</a>
@@ -204,7 +220,7 @@
           <div class="cand-single-user">
             <div class="share-bar circle"></div>
              <div class="can-detail-s">
-               <div class="cst"><img src="http://localhost:3000/images/empPhotoes/{{emp_photo}}" alt="" /></div>
+               <div class="cst"><img  src="http://localhost:3000/images/empPhotoes/{{emp_photo}}" alt="" /></div>
                <h3>{{first_name}} {{last_name}}</h3>
                <span><i>{{emp_skill1}} /  {{emp_skill2}}</i> at Atract Solutions</span>
                <p><a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="accfdec9cdd8c5dac9c0cdd5c9dedf9c9494eccbc1cdc5c082cfc3c1">[email&#160;protected]</a></p>
@@ -222,7 +238,7 @@
                  <div class="cand-details">
                    <div class="job-overview style2">
                      <ul>
-                       <li><i class="la la-money"></i><h3>Offerd Salary</h3><span>35,000 - 20,00,00</span></li>
+                       <!-- <li><i class="la la-money"></i><h3>Offerd Salary</h3><span>35,000 - 20,00,00</span></li> -->
                        <li><i class="la la-mars-double"></i><h3>Gender</h3><span>{{Gender}}</span></li>
                        <li><i class="la la-thumb-tack"></i><h3>Career Level</h3><span>Executive</span></li>
                        <li><i class="la la-puzzle-piece"></i><h3>Industry</h3><span>{{emp_field}}</span></li>
@@ -231,16 +247,15 @@
                      </ul>
                    </div><!-- Job Overview -->
                    <h2 id="can">Candidates About</h2>
-                   <p>Hello my name is {{first_name}} {{last_name}} Connor and I’m a {{emp_skill1}} {{emp_skill2}} from {{city}} / {{state}} / {{country}}. In pharetra orci dignissim, blandit mi semper, ultricies diam. Suspendisse malesuada suscipit nunc non volutpat. Sed porta nulla id orci laoreet tempor non consequat enim. Sed vitae aliquam velit. Aliquam ante erat, blandit at pretium et, accumsan ac est. Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam. </p>
-                   <p>Mauris nec erat ut libero vulputate pulvinar. Aliquam ante erat, blandit at pretium et, accumsan ac est. Integer vehicula rhoncus molestie. Morbi ornare ipsum sed sem condimentum, et pulvinar tortor luctus. Suspendisse condimentum lorem ut elementum aliquam. Mauris nec erat ut libero vulputate pulvinar.</p>
+                   <p>{{emp_desc}}</p>
                    <div class="edu-history-sec">
                      <h2>Education</h2>
                      <div class="edu-history">
                        <i class="la la-graduation-cap"></i>
                        <div class="edu-hisinfo">
-                         <h3 id="uni">{{emp_uni}} University</h3>
+                         <h3 id="uni">{{emp_uni}}    University</h3>
                          <i>{{emp_passing_year}}</i>
-                         <span>Middle East Technical University <i>{{emp_qual}}</i></span>
+                         <!-- <span>Middle East Technical University <i>{{emp_qual}}</i></span> -->
                          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p> -->
                        </div>
                      </div>
@@ -341,7 +356,7 @@
                  </div>
                </div>
                <div class="col-lg-3 column">
-                 <div class="job-overview style3">
+                 <!-- <div class="job-overview style3">
                    <ul>
                      <li><i class="la la-briefcase" href="#can"></i><h3>Candidates About</h3></li>
                      <li><i class="la la-graduation-cap" href="#uni"></i><h3>Education</h3></li>
@@ -351,7 +366,8 @@
                    </ul>
                    <a href="#" title="" class="save-resume">Save Resume</a>
                    <a href="#" title="" class="contct-user">Contact David</a>
-                 </div><!-- Job Overview -->
+                 </div> -->
+                 <!-- Job Overview -->
                </div>
              </div>
            </div>

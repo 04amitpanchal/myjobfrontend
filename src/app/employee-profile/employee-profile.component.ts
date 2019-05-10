@@ -29,6 +29,7 @@ export class EmployeeProfileComponent implements OnInit {
   emp_uni:string;
   emp_passing_year:string;
   emp_qual:string;
+  emp_desc:string;
  selectedFile:File=null;
 //  id:string;
  emp:emp[]=[];
@@ -62,10 +63,13 @@ export class EmployeeProfileComponent implements OnInit {
           this.emp_skill1=data[0].emp_skill1;
           this.emp_skill2=data[0].emp_skill2;
           this.emp_uni=data[0].emp_uni;
+          this.emp_desc=data[0].emp_desc;
+          // alert(this.emp_desc);
         this.emp_passing_year=data[0].emp_passing_year;
         this.emp_qual=data[0].emp_qual;
         localStorage.setItem('first_name',this.first_name);
-
+        localStorage.setItem('emp_field',this.emp_field);
+        localStorage.setItem('emp_field1',this.emp_field);
         localStorage.setItem('last_name',this.last_name);
         localStorage.setItem('emp_photo',this.emp_photo);
       }
@@ -91,8 +95,9 @@ export class EmployeeProfileComponent implements OnInit {
           this.emp_uni=data[0].emp_uni;
         this.emp_passing_year=data[0].emp_passing_year;
         this.emp_qual=data[0].emp_qual;
+        this.emp_desc=data[0].emp_desc;
         localStorage.setItem('first_name',this.first_name);
-
+        localStorage.setItem('emp_field1',this.emp_field);
         localStorage.setItem('last_name',this.last_name);
         localStorage.setItem('emp_photo',this.emp_photo);
         }
@@ -133,7 +138,7 @@ export class EmployeeProfileComponent implements OnInit {
       //     this._route.navigate(['Emp-field-wise-Company']);
       //   }
       // );
-      localStorage.setItem('emp_field',this.emp_field);
+
       //  alert(this.emp_field);
       this._route.navigate(['Emp-field-wise-Company']);
     }

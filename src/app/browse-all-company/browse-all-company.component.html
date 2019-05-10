@@ -25,17 +25,17 @@
 		<div class="block no-padding">
 			<div class="container">
 				 <div class="row no-gape">
-				 	<aside class="col-lg-4 column border-right">
-				 		<div class="widget">
+				 	<!-- <aside class="col-lg-4 column border-right"> -->
+				 		<!-- <div class="widget">
 				 			<div class="search_widget_job">
 				 				<div class="field_w_search">
 				 					<input type="text" placeholder="Search Keywords" />
 				 					<i class="la la-search"></i>
-				 				</div><!-- Search Widget -->
+				 				</div>
 				 				<div class="field_w_search">
 				 					<input type="text" placeholder="All Locations" />
 				 					<i class="la la-map-marker"></i>
-				 				</div><!-- Search Widget -->
+				 				</div>
 				 			</div>
 				 		</div>
 				 		<div class="widget">
@@ -65,8 +65,8 @@
 									<p><input type="checkbox" name="spealism" id="t7"><label for="t7">601 - 701</label></p>
 				 				</div>
 				 			</div>
-				 		</div>
-				 	</aside>
+				 		</div> -->
+				 	<!-- </aside> -->
 				 	<div class="col-lg-8 column">
 				 		<div class="emply-list-sec">
 				 			<div class="emply-list"  *ngFor="let item of company" (click)='companyprofile(item.rec_id)'>
@@ -74,7 +74,7 @@
 				 					<a href="#" title=""><img src="http://localhost:3000/images/recPhotoes/{{item.rec_photo}}" alt="" /></a>
 				 				</div>
 				 				<div class="emply-list-info"  >
-				 					<div class="emply-pstn">4 Open Position</div>
+				 					<!-- <div class="emply-pstn">4 Open Position</div> -->
 				 					<h3><a href="#" title="">{{item.company_name}}</a></h3>
 				 					<span>{{item.company_type}}</span>
 				 					<h6><i class="la la-map-marker"></i> {{item.adderess}}</h6>
@@ -82,7 +82,7 @@
 				 				</div>
 				 			</div><!-- Employe List -->
 
-				 			<div class="pagination">
+				 			<!-- <div class="pagination">
 								<ul>
 									<li class="prev"><a href="#"><i class="la la-long-arrow-left"></i> Prev</a></li>
 									<li><a href="#">1</a></li>
@@ -92,7 +92,8 @@
 									<li><a href="#">14</a></li>
 									<li class="next"><a href="#">Next <i class="la la-long-arrow-right"></i></a></li>
 								</ul>
-							</div><!-- Pagination -->
+              </div> -->
+              <!-- Pagination -->
 				 		</div>
 					</div>
 				 </div>
@@ -107,78 +108,51 @@
 <div class="account-popup-area signin-popup-box">
 	<div class="account-popup">
 		<span class="close-popup"><i class="la la-close"></i></span>
-		<h3>User Login</h3>
-		<span>Click To Login With Demo User</span>
+		<h3>Login Here</h3>
+		<!-- <span>Click To Login With Demo User</span> -->
 		<div class="select-user">
-			<span>Candidate</span>
-			<span>Employer</span>
+			<span (click)="empLogCall()">
+
+        Candidate</span>
+			<span (click)="recLogCall()">
+         Employer
+        </span>
 		</div>
 		<form>
 			<div class="cfield">
-				<input type="text" placeholder="Username" />
-				<i class="la la-user"></i>
+				<input id='email'  type="email" maxlength="30" required  [(ngModel)]="username" placeholder="Username" name="username"/>
+        <!-- <input matInput placeholder="Email" [formControl]="emailFormControl"> -->
+        <i class="la la-user"></i>
 			</div>
 			<div class="cfield">
-				<input type="password" placeholder="********" />
-				<i class="la la-key"></i>
+				<input (onkeypress)="key()"  type="password" [(ngModel)]="password" placeholder="********" name="password" />
+        <!-- <i style="margin-right: 30px;">{{password.length}}/8</i> -->
+        <i class="la la-key"></i>
 			</div>
 			<p class="remember-label">
 				<input type="checkbox" name="cb" id="cb1"><label for="cb1">Remember me</label>
 			</p>
-			<a href="#" title="">Forgot Password?</a>
-			<button type="submit">Login</button>
+      <a title="">Forgot Password?</a>
+
+      <button (click)="OnLogin()" type="submit">Login</button>
+      <a class="signup-popup">Not Register?</a>
 		</form>
-		<div class="extra-login">
+		<!-- <div class="extra-login">
 			<span>Or</span>
 			<div class="login-social">
-				<a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
-				<a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
+        <a class="fb-login"  scope="public_profile,email"     onlogin="checkLoginState();" href="#" title=""><i class="fa fa-facebook"></i></a>
+
+        <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div><!-- LOGIN POPUP -->
 
 <div class="account-popup-area signup-popup-box">
 	<div class="account-popup">
 		<span class="close-popup"><i class="la la-close"></i></span>
-		<h3>Sign Up</h3>
+		<h3>Who Are You?</h3>
 		<div class="select-user">
-			<span>Candidate</span>
-			<span>Employer</span>
+			<span (click)="onClickCandidate()">Candidate</span>
+			<span (click)="onClickCompany()">Employer</span>
 		</div>
-		<form>
-			<div class="cfield">
-				<input type="text" placeholder="Username" />
-				<i class="la la-user"></i>
-			</div>
-			<div class="cfield">
-				<input type="password" placeholder="********" />
-				<i class="la la-key"></i>
-			</div>
-			<div class="cfield">
-				<input type="text" placeholder="Email" />
-				<i class="la la-envelope-o"></i>
-			</div>
-			<div class="dropdown-field">
-				<select data-placeholder="Please Select Specialism" class="chosen">
-					<option>Web Development</option>
-					<option>Web Designing</option>
-					<option>Art & Culture</option>
-					<option>Reading & Writing</option>
-				</select>
-			</div>
-			<div class="cfield">
-				<input type="text" placeholder="Phone Number" />
-				<i class="la la-phone"></i>
-			</div>
-			<button type="submit">Signup</button>
-		</form>
-		<div class="extra-login">
-			<span>Or</span>
-			<div class="login-social">
-				<a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
-				<a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
-			</div>
-		</div>
-	</div>
-</div><!-- SIGNUP POPUP -->

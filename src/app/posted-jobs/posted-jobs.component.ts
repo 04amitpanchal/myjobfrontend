@@ -3,6 +3,7 @@ import { job } from '../classes/jobclass';
 import { GetjobbyidService } from '../services/getjobbyid.service';
 import { UpdaterecService } from '../services/updaterec.service';
 import { Adminclass } from '../classes/adminclass';
+import { GetJobRecIdService } from '../services/get-job-rec-id.service';
 
 @Component({
   selector: 'app-posted-jobs',
@@ -16,7 +17,8 @@ export class PostedJobsComponent implements OnInit {
 getjob:job[]=[];
   constructor(
     private jobs:GetjobbyidService,
-    private rec:UpdaterecService
+    private rec:UpdaterecService,
+    private getjobs:GetJobRecIdService
   ) { }
 
 
@@ -33,15 +35,15 @@ getjob:job[]=[];
       });
 
 
-            alert(this.id);
-            this.jobs.getJobById(this.id).subscribe(
+            // alert(this.id);
+            this.getjobs.getJobByRecId(this.id).subscribe(
               (data:any)=>{
                 // if (data[0].fk_rec_id=="ztechpltd@gmail.com") {
                 //   this.getjob=data;
                 //   console.log("job data"+data[0].fk_rec_id);
                 // } else {
                 //   console.log("in else");
-                  console.log("job data"+data[0]);
+                  console.log("job data"+data);
                 // }
 
                 this.getjob=data;

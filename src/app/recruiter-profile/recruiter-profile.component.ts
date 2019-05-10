@@ -18,6 +18,7 @@ export class RecruiterProfileComponent implements OnInit {
   rec_photo:string;
   company_type:string;
  selectedFile:File=null;
+ com_desc:string;
  id:string;
  rec:Adminclass[]=[];
    constructor(private updaterec:UpdaterecService,
@@ -29,7 +30,6 @@ export class RecruiterProfileComponent implements OnInit {
       //  this.id=this._aroute.snapshot.params['id'];
       //  this.rec_id=;
       this.rec_id=localStorage.getItem('rec_id');
-
       console.log(this.rec_id);
       if(this._aroute.snapshot.params['id']==1)
       {
@@ -44,7 +44,11 @@ export class RecruiterProfileComponent implements OnInit {
           this.rec_photo=data[0].rec_photo;
           this.company_type=data[0].company_type;
           this.adderess=data[0].adderess;
+          this.com_desc=data[0].com_desc;
           localStorage.setItem('company_name',this.company_name);
+          localStorage.setItem('company_type',this.company_type);
+          localStorage.setItem('rec_photo',this.rec_photo);
+          // alert(this.rec_photo);
         }
       );
       }
@@ -60,7 +64,9 @@ export class RecruiterProfileComponent implements OnInit {
             this.rec_photo=data[0].rec_photo;
             this.company_type=data[0].company_type;
             this.adderess=data[0].adderess;
+            this.com_desc=data[0].com_desc;
             localStorage.setItem('company_name',this.company_name);
+            localStorage.setItem('rec_photo',this.rec_photo);
           }
         );
       }

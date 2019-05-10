@@ -1,6 +1,9 @@
 <div class="responsive-header">
   <div class="responsive-menubar">
-    <div class="res-logo"><a href="index.html" title=""><img src="../../assets/uitemplate/images/resource/logo.png" alt="" /></a></div>
+      <div class="logo">
+          <a  title=""><span style="font-size: 40px;color: white;font-family:cursive;">My Job</span><span style="font-size: 20px;color: white;font-family:cursive;">.com</span></a>
+        </div><!-- Logo -->
+
     <div class="menu-resaction">
       <div class="res-openmenu">
         <img src="../../assets/uitemplate/images/icon.png" alt="" /> Menu
@@ -25,7 +28,7 @@
     <div class="responsivemenu">
       <ul>
           <li>
-            <a [routerLink]="['/recruiterprofile']" routerLinkActive="router-link-active" title="">Home</a>
+            <a [routerLink]="['/employee-profile/1']" routerLinkActive="router-link-active" title="">Home</a>
 
           </li>
           <!-- <li class="menu-item-has-children">
@@ -122,9 +125,10 @@
 <header class="stick-top">
   <div class="menu-sec">
     <div class="container">
-      <div class="logo">
-        <a href="index.html" title=""><img src="../../assets/uitemplate/images/resource/logo.png" alt="" /></a>
-      </div><!-- Logo -->
+        <div class="logo">
+            <a  title=""><span style="font-size: 40px;color: white;font-family:cursive;">My Job</span><span style="font-size: 20px;color: white;font-family:cursive;">.com</span></a>
+          </div><!-- Logo -->
+
       <div class="btns-profiles-sec">
         <span><img src="http://localhost:3000/images/empPhotoes/{{emp_photo}}" height="50px;width:50px;" alt="" /> <i class="la la-angle-down"></i></span>
         <ul>
@@ -138,15 +142,22 @@
       <nav>
         <ul>
           <li>
-            <a [routerLink]="['/recruiterprofile']" routerLinkActive="router-link-active"  title="">Home</a>
+            <a [routerLink]="['/employee-profile/1']" routerLinkActive="router-link-active"  title="">Home</a>
 
+          </li>
+
+          <li>
+            <a [routerLink]="['/jobsforemp']" routerLinkActive="router-link-active"  title="">Jobs</a>
           </li>
           <li class="menu-item-has-children">
             <a  title="">Companies</a>
             <ul>
               <li><a (click)="relatedCompany()" routerLinkActive="router-link-active" title="">Related Company</a></li>
             </ul>
+
           </li>
+          <li><a [routerLink]="['/AppliedJobs']" routerLinkActive="router-link-active"  title="">Applied Jobs</a></li>
+            <li><a [routerLink]="['/contactusforemp']" routerLinkActive="router-link-active"  title="">Contact Us</a></li>
           <li><a title="" [routerLink]="['/empnotification']" routerLinkActive="router-link-active" ><mat-icon title="Job-Alerts">notifications</mat-icon></a></li>
 
         </ul>

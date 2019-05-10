@@ -7,6 +7,7 @@ export class addjob{
     public job_desc:string,
     public salary_min:number,
     public salary_max:number,
-    public fk_company_name:string
+    public job_field:string,
+    public fk_company_name?:string
   ){}
 }

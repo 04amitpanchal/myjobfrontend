@@ -49,7 +49,7 @@ export class EditEmployeeComponent implements OnInit {
         console.log(data);
         this.edu_id=data[0].edu_id;
         localStorage.setItem('edu_id',this.edu_id.toString());
-        // alert(this.edu_id);
+         alert(this.edu_id);
       }
     );
 

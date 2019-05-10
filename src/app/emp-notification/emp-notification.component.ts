@@ -10,6 +10,7 @@ import { GetAllEmpNotificationService } from '../services/get-all-emp-notificati
 import { GetAllDataForEmpNotificationService } from '../services/get-all-data-for-emp-notification.service';
 import { empNotificatioonData } from '../classes/empNotificationDataClass';
 import { empNotification } from '../classes/empNotificationClass';
+import { JobsForEmpService } from '../services/jobs-for-emp.service';
 
 @Component({
   selector: 'app-emp-notification',
@@ -24,21 +25,34 @@ export class EmpNotificationComponent implements OnInit {
    fk_apply_id:number;
    fk_job_id:number;
    fk_emp_id:string;
+   field:string;
+rec_photo:string;
   constructor(
     private getAllEmpNotification:GetAllEmpNotificationService,
     private getAllDataForEmpNotification:GetAllDataForEmpNotificationService,
-    private _aroute:ActivatedRoute
+    private _aroute:ActivatedRoute,
+    private jobs:JobsForEmpService
 
   ) { }
 
   ngOnInit() {
+    this.field=localStorage.getItem('emp_field1');
     // this.fk_emp_id=this._aroute.snapshot.params['id'];
+    this.jobs.getjobsforemp(this.field).subscribe(
+      (data:any)=>
+      {
+          // console.log(data);
+
+          this.rec_photo=data[0].rec_photo;
+        // alert(this.rec_photo);
+      }
+    );
     this.fk_emp_id=localStorage.getItem('emp_id');
     this.getAllEmpNotification.getAllEmpNotification(this.fk_emp_id).subscribe(
       (data:empNotification[])=>{
 
 
-        console.log(data);
+        // console.log(data);
 
         if(data.length>0)
         {
@@ -50,7 +64,7 @@ export class EmpNotificationComponent implements OnInit {
 
               this.getAllDataForEmpNotification.getAllDataForEmpNotification(new empNotification(this.en_id,this.fk_res_id,this.fk_apply_id,this.fk_job_id,this.fk_emp_id)).subscribe(
                 (data:empNotificatioonData[])=>{
-                  console.log(data);
+                  // console.log(data);
                   this.empNotificationData=data;
                 });
         }

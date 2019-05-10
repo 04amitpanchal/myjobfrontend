@@ -2,7 +2,10 @@
 
         <div class="responsive-header">
             <div class="responsive-menubar">
-              <div class="res-logo"><a href="index.html" title=""><img src="../../assets/uitemplate/images/resource/logo.png" alt="" /></a></div>
+                <div class="logo">
+                    <a  title=""><span style="font-size: 40px;color: white;font-family:cursive;">My Job</span><span style="font-size: 20px;color: white;font-family:cursive;">.com</span></a>
+                  </div><!-- Logo -->
+
               <div class="menu-resaction">
                 <div class="res-openmenu">
                   <img src="images/icon.png" alt="" /> Menu
@@ -88,9 +91,10 @@
           <header class="gradient">
             <div class="menu-sec">
               <div class="container">
-                <div class="logo">
-                  <a href="index.html" title=""><img src="images/resource/logo.png" alt="" /></a>
-                </div><!-- Logo -->
+                  <div class="logo">
+                      <a  title=""><span style="font-size: 40px;color: white;font-family:cursive;">My Job</span><span style="font-size: 20px;color: white;font-family:cursive;">.com</span></a>
+                    </div><!-- Logo -->
+
                 <div class="btn-extars">
                   <a   routerLinkActive="router-link-active"  title="" class="post-job-btn signin-popup"><i class="la la-plus"></i>Post Jobs</a>
                   <ul class="account-btns">
@@ -100,7 +104,7 @@
                 </div><!-- Btn Extras -->
                 <nav>
                   <ul>
-                    <li class="menu-item-has-children">
+                    <li >
                       <a  title="">Home</a>
 
                     <li class="menu-item-has-children">
@@ -205,8 +209,8 @@
       <div class="block">
         <div class="container">
            <div class="row">
-             <div class="col-lg-6 column">
-               <div class="contact-form">
+             <div class="col-lg-4 column">
+               <!-- <div class="contact-form">
                  <h3>Keep In Touch</h3>
                  <form>
                    <div class="row">
@@ -239,9 +243,9 @@
                      </div>
                    </div>
                  </form>
-               </div>
+               </div> -->
              </div>
-             <div class="col-lg-6 column">
+             <div class="col-lg-8 column">
                <div class="contact-textinfo style2">
                  <h3>Zaksy Vision Office(India)</h3>
                  <ul>
@@ -300,12 +304,12 @@
 		</div>
 		<form>
 			<div class="cfield">
-				<input id='email'  type="email"  required  [(ngModel)]="username" placeholder="Username" name="username"/>
+				<input id='email'  type="email" maxlength="30" required  [(ngModel)]="username" placeholder="Username" name="username"/>
         <!-- <input matInput placeholder="Email" [formControl]="emailFormControl"> -->
         <i class="la la-user"></i>
 			</div>
 			<div class="cfield">
-				<input (onkeypress)="key()"  type="password"  [(ngModel)]="password" placeholder="********" name="password" />
+				<input (onkeypress)="key()"  type="password" [(ngModel)]="password" placeholder="********" name="password" />
         <!-- <i style="margin-right: 30px;">{{password.length}}/8</i> -->
         <i class="la la-key"></i>
 			</div>
@@ -315,16 +319,16 @@
       <a title="">Forgot Password?</a>
 
       <button (click)="OnLogin()" type="submit">Login</button>
-      <a class="signup-popup">Not Redgister</a>
+      <a class="signup-popup">Not Register?</a>
 		</form>
-		<div class="extra-login">
+		<!-- <div class="extra-login">
 			<span>Or</span>
 			<div class="login-social">
         <a class="fb-login"  scope="public_profile,email"     onlogin="checkLoginState();" href="#" title=""><i class="fa fa-facebook"></i></a>
 
         <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div><!-- LOGIN POPUP -->
 
@@ -336,39 +340,3 @@
 			<span (click)="onClickCandidate()">Candidate</span>
 			<span (click)="onClickCompany()">Employer</span>
 		</div>
-		<!-- <form>
-			<div class="cfield">
-				<input type="text" placeholder="Username" />
-				<i class="la la-user"></i>
-			</div>
-			<div class="cfield">
-				<input type="password" placeholder="********" />
-				<i class="la la-key"></i>
-			</div>
-			<div class="cfield">
-				<input type="text" placeholder="Email" />
-				<i class="la la-envelope-o"></i>
-			</div>
-			<div class="dropdown-field">
-				<select data-placeholder="Please Select Specialism" class="chosen">
-					<option>Web Development</option>
-					<option>Web Designing</option>
-					<option>Art & Culture</option>
-					<option>Reading & Writing</option>
-				</select>
-			</div>
-			<div class="cfield">
-				<input type="text" placeholder="Phone Number" />
-				<i class="la la-phone"></i>
-			</div>
-			<button type="submit">Signup</button>
-		</form>
-		<div class="extra-login">
-			<span>Or</span>
-			<div class="login-social">
-				<a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
-				<a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
-			</div>
-		</div> -->
-	</div>
-</div><!-- SIGNUP POPUP -->

@@ -1,6 +1,167 @@
 
 
 
+<div class="responsive-header">
+  <div class="responsive-menubar">
+    <div class="res-logo"><a href="index.html" title=""><img src="../../assets/uitemplate/images/resource/logo.png" alt="" /></a></div>
+    <div class="menu-resaction">
+      <div class="res-openmenu">
+        <img src="images/icon.png" alt="" /> Menu
+      </div>
+      <div class="res-closemenu">
+        <img src="images/icon2.png" alt="" /> Close
+      </div>
+    </div>
+  </div>
+  <div class="responsive-opensec">
+    <div class="btn-extars">
+      <a routerLinkActive="router-link-active" title="" class="post-job-btn signin-popup"><i class="la la-plus"></i>Post Jobs</a>
+      <ul class="account-btns">
+        <li class="signup-popup"><a title=""><i class="la la-key"></i> Sign Up</a></li>
+        <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Login</a></li>
+      </ul>
+    </div><!-- Btn Extras -->
+    <form class="res-search">
+      <input type="text" placeholder="Job title, keywords or company name" />
+      <button type="submit"><i class="la la-search"></i></button>
+    </form>
+    <div class="responsivemenu">
+      <ul>
+          <li class="menu-item-has-children">
+            <a [routerLink]="['']" routerLinkActive="router-link-active"  title="">Home</a>
+          </li>
+          <li class="menu-item-has-children">
+            <a  title="">Employers</a>
+            <ul>
+              <li><a [routerLink]="['/browseallcompany']" routerLinkActive="router-link-active"  title=""> Employer List 1</a></li>
+              <!-- <li><a href="employer_list2.html" title="">Employer List 2</a></li>
+              <li><a href="employer_list3.html" title="">Employer List 3</a></li>
+              <li><a href="employer_list4.html" title="">Employer List 4</a></li>
+              <li><a href="employer_single1.html" title="">Employer Single 1</a></li>
+              <li><a href="employer_single2.html" title="">Employer Single 2</a></li>
+              <li class="menu-item-has-children">
+                <a href="#" title="">Employer Dashboard</a>
+                <ul>
+                  <li><a href="employer_manage_jobs.html" title="">Employer Job Manager</a></li>
+                  <li><a href="employer_packages.html" title="">Employer Packages</a></li>
+                  <li><a href="employer_post_new.html" title="">Employer Post New</a></li>
+                  <li><a href="employer_profile.html" title="">Employer Profile</a></li>
+                  <li><a href="employer_resume.html" title="">Employer Resume</a></li>
+                  <li><a href="employer_transactions.html" title="">Employer Transaction</a></li>
+                  <li><a href="employer_job_alert.html" title="">Employer Job Alert</a></li>
+                  <li><a href="employer_change_password.html" title="">Employer Change Password</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li class="menu-item-has-children">
+            <a  title="">Candidates</a>
+            <ul>
+              <li><a [routerLink]="['allcandidates']" routerLinkActive="router-link-active"  title="">Candidates List 1</a></li>
+              <!-- <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>
+              <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>
+              <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>
+              <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>
+              <li class="menu-item-has-children">
+                <a href="#" title="">Candidates Dashboard</a>
+                <ul>
+                  <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>
+                  <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>
+                  <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>
+                  <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>
+                  <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>
+                  <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>
+                  <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>
+                  <li><a href="candidates_change_password.html" title="">Change Password</a></li>
+                  <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li><a [routerLink]="['/contactUs']" routerLinkActive="router-link-active"  title="">Contact Us</a></li>
+          <li><a [routerLink]="['/aboutUs']" routerLinkActive="router-link-active"  title="">About Us</a></li>
+
+        </ul>
+    </div>
+  </div>
+</div>
+
+<header class="gradient">
+  <div class="menu-sec">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" title=""><img src="../../assets/uitemplate/images/resource/logo.png" alt="" /></a>
+      </div><!-- Logo -->
+      <div class="btn-extars">
+        <a   routerLinkActive="router-link-active"  title="" class="post-job-btn signin-popup"><i class="la la-plus"></i>Post Jobs</a>
+        <ul class="account-btns">
+          <li class="signup-popup"><a title=""><i class="la la-key"></i> Sign Up</a></li>
+          <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Login</a></li>
+        </ul>
+      </div><!-- Btn Extras -->
+      <nav>
+        <ul>
+          <li >
+            <a  title="">Home</a>
+
+          <li class="menu-item-has-children">
+            <a  title="">Employers</a>
+            <ul>
+              <li><a [routerLink]="['/browseallcompany']" routerLinkActive="router-link-active"  title=""> Employer List 1</a></li>
+              <!-- <li><a href="employer_list2.html" title="">Employer List 2</a></li>
+              <li><a href="employer_list3.html" title="">Employer List 3</a></li>
+              <li><a href="employer_list4.html" title="">Employer List 4</a></li>
+              <li><a href="employer_single1.html" title="">Employer Single 1</a></li>
+              <li><a href="employer_single2.html" title="">Employer Single 2</a></li>
+              <li class="menu-item-has-children">
+                <a href="#" title="">Employer Dashboard</a>
+                <ul>
+                  <li><a href="employer_manage_jobs.html" title="">Employer Job Manager</a></li>
+                  <li><a href="employer_packages.html" title="">Employer Packages</a></li>
+                  <li><a href="employer_post_new.html" title="">Employer Post New</a></li>
+                  <li><a href="employer_profile.html" title="">Employer Profile</a></li>
+                  <li><a href="employer_resume.html" title="">Employer Resume</a></li>
+                  <li><a href="employer_transactions.html" title="">Employer Transaction</a></li>
+                  <li><a href="employer_job_alert.html" title="">Employer Job Alert</a></li>
+                  <li><a href="employer_change_password.html" title="">Employer Change Password</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li class="menu-item-has-children">
+            <a   title="">Candidates</a>
+            <ul>
+              <li><a [routerLink]="['/allcandidates']" routerLinkActive="router-link-active" title="">Candidates List 1</a></li>
+              <!-- <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>
+              <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>
+              <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>
+              <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>
+              <li class="menu-item-has-children">
+                <a href="#" title="">Candidates Dashboard</a>
+                <ul>
+                  <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>
+                  <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>
+                  <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>
+                  <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>
+                  <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>
+                  <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>
+                  <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>
+                  <li><a href="candidates_change_password.html" title="">Change Password</a></li>
+                  <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+
+          <li><a [routerLink]="['/contactUs']" routerLinkActive="router-link-active"  title="">Contact Us</a></li>
+          <li><a [routerLink]="['/aboutUs']" routerLinkActive="router-link-active"  title="">About Us</a></li>
+
+        </ul>
+      </nav><!-- Menus -->
+    </div>
+  </div>
+</header>
+
 <section>
   <div class="block no-padding  gray">
     <div class="container">
@@ -33,49 +194,51 @@
           <div class="account-popup-area signup-popup-box static">
             <div class="account-popup">
               <h3>Sign Up</h3>
-              <span>Lorem ipsum dolor sit amet consectetur adipiscing elit odio duis risus at lobortis ullamcorper</span>
+              <!-- <span>Lorem ipsum dolor sit amet consectetur adipiscing elit odio duis risus at lobortis ullamcorper</span> -->
               <!-- <div class="select-user">
                 <span>Candidate</span>
                 <span>Employer</span>
               </div> -->
               <!-- <form > -->
                 <!-- <table class="table"> -->
+                    <div class="cfield">
+                        <!-- <input id="" type="email" style='border-radius: 10px;' placeholder=" Company Email" [(ngModel)]="company_web"/> -->
+                        <!-- <form class="example-form"> -->
+                           <mat-form-field class="example-full-width " style="border:gray !important;">
+                            <input type="email" style="float: left !important;
+                            width: 100% !important;
+                            background: no-repeat !important;
+                            margin: 0 !important;
+                            font-family: Open Sans !important;
+                            font-size: 13px !important;
+                            color: #474747 !important;
+                            padding: 16px 45px 16px 15px !important;
+                            border: gray !important;"  matInput placeholder="Email" [formControl]="emailFormControl"
+                                   [errorStateMatcher]="matcher" class="cfield" [(ngModel)]="rec_id">
+                            <!-- <mat-hint>Errors appear instantly! </mat-hint> -->
+                            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                              Please enter a valid email address
+                            </mat-error>
+                            <mat-error *ngIf="emailFormControl.hasError('required')">
+                              Email is <strong>required</strong>
+                            </mat-error>
+                          </mat-form-field>
+                        <!-- </form> -->
+
+                        <!-- <i class="la la-envelope-o"></i> -->
+                      </div>
+                      <div class="cfield">
+                          <input type="password" style="border-radius: 10px;" placeholder="********" [(ngModel)]="password"/>
+                          <!-- <i class="la la-key"></i> -->
+                        </div>
                   <div class="cfield"  >
                       <input type="text" style="border-radius: 10px;" placeholder="Company Name" [(ngModel)]="company_name" />
                       <!-- <i class="la la-user"></i> -->
                     </div>
-                    <div class="cfield">
-                        <input type="password" style="border-radius: 10px;" placeholder="********" [(ngModel)]="password"/>
-                        <!-- <i class="la la-key"></i> -->
-                      </div>
-                  <div class="cfield">
-                      <!-- <input id="" type="email" style='border-radius: 10px;' placeholder=" Company Email" [(ngModel)]="company_web"/> -->
-                      <!-- <form class="example-form"> -->
-                         <mat-form-field class="example-full-width " style="border:gray !important;">
-                          <input type="email" style="float: left !important;
-                          width: 100% !important;
-                          background: no-repeat !important;
-                          margin: 0 !important;
-                          font-family: Open Sans !important;
-                          font-size: 13px !important;
-                          color: #474747 !important;
-                          padding: 16px 45px 16px 15px !important;
-                          border: gray !important;"  matInput placeholder="Email" [formControl]="emailFormControl"
-                                 [errorStateMatcher]="matcher" class="cfield">
-                          <!-- <mat-hint>Errors appear instantly! </mat-hint> -->
-                          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                            Please enter a valid email address
-                          </mat-error>
-                          <mat-error *ngIf="emailFormControl.hasError('required')">
-                            Email is <strong>required</strong>
-                          </mat-error>
-                        </mat-form-field>
-                      <!-- </form> -->
 
-                      <!-- <i class="la la-envelope-o"></i> -->
-                    </div>
+
                     <div class="cfield">
-                        <input name="email"  type="email" style='border-radius: 10px;' placeholder="Personal Email" [(ngModel)]="rec_id"/>
+                        <input name="email"  type="email" style='border-radius: 10px;' placeholder="Company Website" [(ngModel)]="company_web"/>
                         <!-- <i class="la la-envelope-o"></i> -->
                       </div>
 
@@ -126,6 +289,10 @@
                       </div>
                     </div>
                   </div>
+                  <div class="cfield"  >
+                      <textarea type="text" style="border-radius: 10px;" placeholder="Company Description" [(ngModel)]="com_desc"></textarea>
+                      <!-- <i class="la la-user"></i> -->
+                    </div>
                 <!-- </div> -->
 
 
@@ -150,13 +317,13 @@
                 <button type="submit" class="signup"(click)="onsignuprec()">Signup</button>
               <!-- </table> -->
                 <!-- </form> -->
-              <div class="extra-login">
+              <!-- <div class="extra-login">
                 <span>Or</span>
                 <div class="login-social">
                   <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
                   <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div><!-- SIGNUP POPUP -->
         </div>

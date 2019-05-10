@@ -9,6 +9,9 @@ import { CompanyTypeService } from '../services/company-type.service';
 import { GetJobByFieldService } from '../services/get-job-by-field.service';
 import { job } from '../classes/jobclass';
 import { jobR } from '../classes/jobRec';
+import { GetemppasswordbyidService } from '../services/getemppasswordbyid.service';
+import { EmailClass } from '../classes/emailclass';
+import { EmailService } from '../services/email.service';
 
 @Component({
   selector: 'app-template1',
@@ -17,17 +20,29 @@ import { jobR } from '../classes/jobRec';
 })
 export class Template1Component implements OnInit {
    typeOfUser:string;
+   tp:string;
+   emp_password:string;
   //  flag:boolean;
    username:string;
    x:number=0;
+   field_emp:string[]=[
+    "it",
+    "management",
+    "butie expert"
+  ];
+
+  send_job_id:number;
    job_id:number;
    password:string;
    emp_photo:string;
    pcnt:number=0;
   public rec_by_field:jobR[]=[];
    field:string;
+   pass:string;
    company_type:Company_Type[]=[];
   constructor(private getJobByFieldObj:GetJobByFieldService,
+    private emppasswordbyidOBJ:GetemppasswordbyidService,
+    private _email:EmailService,
     private Company_type_obj:CompanyTypeService,private loginverify:LoginService,private loginverifyEmp:LoginEmpService,private _route:Router) { }
 
   ngOnInit() {
@@ -44,6 +59,33 @@ export class Template1Component implements OnInit {
   }
 
 
+
+  onemail()
+  {
+
+    this.emppasswordbyidOBJ.getempPasswordbyID(new emp(this.username)).subscribe(
+      (data:any)=>{
+        console.log(data);
+        this.emp_password=data[0].emp_password;
+
+        localStorage.setItem('e',this.emp_password);
+        alert(localStorage.getItem('e'));
+        // this.tp=this.emp_password;
+      }
+    );
+// alert(this.e);
+// alert();
+      // localStorage.getItem('emp')
+    this._email.email(new EmailClass(this.username,"Password",localStorage.getItem('e'))).subscribe(
+      (data:any)=>{
+        // alert(this.tp);
+        console.log(data);
+      }
+    );
+
+
+  }
+
   key()
   {
     this.pcnt=this.pcnt+1;
@@ -54,7 +96,7 @@ export class Template1Component implements OnInit {
     localStorage.setItem('job_spec',j);
     localStorage.setItem('onSearchField',this.field);
     alert(this.field);
-    this._route.navigate(['JobSingle']);
+    this._route.navigate(['JobSingle',+this.send_job_id]);
   }
 
   CompanyField()
@@ -64,6 +106,7 @@ export class Template1Component implements OnInit {
     this.getJobByFieldObj.getJobByField(this.field).subscribe(
       (data:any)=>{
         console.log(data);
+        this.send_job_id=data[0].job_id;
         this.rec_by_field=data;
         if(data.length>0)
         {

@@ -15,6 +15,8 @@ export class HeaderRecComponent implements OnInit {
 
   ngOnInit() {
 
+    this.rec_photo=localStorage.getItem('rec_photo');
+    // alert(this.rec_photo);
   }
   onlogout()
   {

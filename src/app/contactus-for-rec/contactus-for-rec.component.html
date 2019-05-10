@@ -1,0 +1,312 @@
+<div class="responsive-header">
+  <div class="responsive-menubar">
+      <div class="logo">
+          <a  title=""><span style="font-size: 40px;color: white;font-family:cursive;">My Job</span><span style="font-size: 20px;color: white;font-family:cursive;">.com</span></a>
+        </div><!-- Logo -->
+
+    <div class="menu-resaction">
+      <div class="res-openmenu">
+        <img src="images/icon.png" alt="" /> Menu
+      </div>
+      <div class="res-closemenu">
+        <img src="images/icon2.png" alt="" /> Close
+      </div>
+    </div>
+  </div>
+  <div class="responsive-opensec">
+    <div class="btn-extars">
+      <a routerLinkActive="router-link-active" title="" class="post-job-btn signin-popup"><i class="la la-plus"></i>Post Jobs</a>
+      <ul class="account-btns">
+        <li class="signup-popup"><a title=""><i class="la la-key"></i> Sign Up</a></li>
+        <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Login</a></li>
+      </ul>
+    </div><!-- Btn Extras -->
+    <form class="res-search">
+      <input type="text" placeholder="Job title, keywords or company name" />
+      <button type="submit"><i class="la la-search"></i></button>
+    </form>
+    <div class="responsivemenu">
+      <ul>
+          <li class="menu-item-has-children">
+            <a [routerLink]="['']" routerLinkActive="router-link-active"  title="">Home</a>
+          </li>
+          <li class="menu-item-has-children">
+            <a  title="">Employers</a>
+            <ul>
+              <li><a [routerLink]="['/browseallcompany']" routerLinkActive="router-link-active"  title=""> Employer List 1</a></li>
+              <!-- <li><a href="employer_list2.html" title="">Employer List 2</a></li>
+              <li><a href="employer_list3.html" title="">Employer List 3</a></li>
+              <li><a href="employer_list4.html" title="">Employer List 4</a></li>
+              <li><a href="employer_single1.html" title="">Employer Single 1</a></li>
+              <li><a href="employer_single2.html" title="">Employer Single 2</a></li>
+              <li class="menu-item-has-children">
+                <a href="#" title="">Employer Dashboard</a>
+                <ul>
+                  <li><a href="employer_manage_jobs.html" title="">Employer Job Manager</a></li>
+                  <li><a href="employer_packages.html" title="">Employer Packages</a></li>
+                  <li><a href="employer_post_new.html" title="">Employer Post New</a></li>
+                  <li><a href="employer_profile.html" title="">Employer Profile</a></li>
+                  <li><a href="employer_resume.html" title="">Employer Resume</a></li>
+                  <li><a href="employer_transactions.html" title="">Employer Transaction</a></li>
+                  <li><a href="employer_job_alert.html" title="">Employer Job Alert</a></li>
+                  <li><a href="employer_change_password.html" title="">Employer Change Password</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li class="menu-item-has-children">
+            <a  title="">Candidates</a>
+            <ul>
+              <li><a [routerLink]="['allcandidates']" routerLinkActive="router-link-active"  title="">Candidates List 1</a></li>
+              <!-- <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>
+              <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>
+              <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>
+              <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>
+              <li class="menu-item-has-children">
+                <a href="#" title="">Candidates Dashboard</a>
+                <ul>
+                  <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>
+                  <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>
+                  <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>
+                  <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>
+                  <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>
+                  <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>
+                  <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>
+                  <li><a href="candidates_change_password.html" title="">Change Password</a></li>
+                  <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li><a [routerLink]="['/contactUs']" routerLinkActive="router-link-active"  title="">Contact Us</a></li>
+          <li><a [routerLink]="['/aboutUs']" routerLinkActive="router-link-active"  title="">About Us</a></li>
+
+        </ul>
+    </div>
+  </div>
+</div>
+
+<header class="gradient">
+  <div class="menu-sec">
+    <div class="container">
+        <div class="logo">
+            <a  title=""><span style="font-size: 40px;color: white;font-family:cursive;">My Job</span><span style="font-size: 20px;color: white;font-family:cursive;">.com</span></a>
+          </div><!-- Logo -->
+
+      <div class="btns-profiles-sec">
+        <span><img src="http://localhost:3000/images/recPhotoes/{{rec_photo}}" style='height: 50px;width: 50px;' alt="" /><i class="la la-angle-down"></i></span>
+        <ul>
+          <li><a [routerLink]="['/recruiterprofile',1]" routerLinkActive="router-link-active"  title=""><i class="la la-file-text"></i>My Profile</a></li>
+          <li><a [routerLink]="['/editprofile']" routerLinkActive="router-link-active"  title=""><i class="la la-briefcase"></i>Edit Profile</a></li>
+          <!-- <li><a href="#" title=""><i class="la la-line-chart"></i> Transactions</a></li> -->
+          <!-- <li><a href="#" title=""><i class="la la-magnet"></i> Resumes</a></li> -->
+          <!-- <li><a href="#" title=""><i class="la la-folder-open"></i> Packages</a></li> -->
+          <li><a [routerLink]="['/postjob']" routerLinkActive="router-link-active"  title=""><i class="la la-leaf"></i> Post a New Job</a></li>
+          <!-- <li><a href="#" title=""><i class="la la-phone"></i> Job Alerts</a></li> -->
+          <li [routerLink]="['/postedjobs']" routerLinkActive="router-link-active"><a  title=""><i class="la la-history" [routerLink]="['/postedjobs']" routerLinkActive="router-link-active" ></i> Posted Jobs</a></li>
+          <li><a [routerLink]="['/changepassword']" routerLinkActive="router-link-active"  title=""><i class="la la-key"></i> Change Password</a></li>
+          <li><a [routerLink]="['']" routerLinkActive="router-link-active" (click)="onlogout()" title=""><i class="la la-history"></i> Logout</a></li>
+        </ul>
+      </div>
+      <!-- <div class="btn-extars">
+        <a   routerLinkActive="router-link-active"  title="" class="post-job-btn signin-popup"><i class="la la-plus"></i>Post Jobs</a>
+        <ul class="account-btns">
+          <li class="signup-popup"><a title=""><i class="la la-key"></i> Sign Up</a></li>
+          <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Login</a></li>
+        </ul>
+      </div> -->
+      <!-- Btn Extras -->
+      <nav>
+        <ul>
+          <li >
+            <a [routerLink]="['/recruiterprofilr/1']" routerLinkActive="router-link-active"  title="">Home</a>
+
+          <li class="menu-item-has-children">
+            <a  title="">Candidates</a>
+            <ul>
+              <li><a [routerLink]="['/allcandidates']" routerLinkActive="router-link-active"  title="">Our Candidates</a></li>
+              <!-- <li><a href="employer_list2.html" title="">Employer List 2</a></li>
+              <li><a href="employer_list3.html" title="">Employer List 3</a></li>
+              <li><a href="employer_list4.html" title="">Employer List 4</a></li>
+              <li><a href="employer_single1.html" title="">Employer Single 1</a></li>
+              <li><a href="employer_single2.html" title="">Employer Single 2</a></li>
+              <li class="menu-item-has-children">
+                <a href="#" title="">Employer Dashboard</a>
+                <ul>
+                  <li><a href="employer_manage_jobs.html" title="">Employer Job Manager</a></li>
+                  <li><a href="employer_packages.html" title="">Employer Packages</a></li>
+                  <li><a href="employer_post_new.html" title="">Employer Post New</a></li>
+                  <li><a href="employer_profile.html" title="">Employer Profile</a></li>
+                  <li><a href="employer_resume.html" title="">Employer Resume</a></li>
+                  <li><a href="employer_transactions.html" title="">Employer Transaction</a></li>
+                  <li><a href="employer_job_alert.html" title="">Employer Job Alert</a></li>
+                  <li><a href="employer_change_password.html" title="">Employer Change Password</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </li>
+          <li><a [routerLink]="['/contactusforrec']" routerLinkActive="router-link-active"  title="">Contact Us</a></li>
+          <li><a [routerLink]="['/relatedcandidates']" routerLinkActive="router-link-active" title="">Best Candidates 4U</a></li>
+          <li ><a  [routerLink]="['/recNotification']" routerLinkActive="router-link-active"  title="Job Alert" ><mat-icon >notifications</mat-icon></a></li>
+          <!-- <li class="menu-item-has-children">
+            <a   title="">Candidates</a>
+            <ul>
+              <li><a [routerLink]="['/allcandidates']" routerLinkActive="router-link-active" title="">Candidates List 1</a></li>
+              <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>
+              <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>
+              <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>
+              <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>
+              <li class="menu-item-has-children">
+                <a href="#" title="">Candidates Dashboard</a>
+                <ul>
+                  <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>
+                  <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>
+                  <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>
+                  <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>
+                  <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>
+                  <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>
+                  <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>
+                  <li><a href="candidates_change_password.html" title="">Change Password</a></li>
+                  <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li> -->
+
+          <!-- <li><a [routerLink]="['/contactUs']" routerLinkActive="router-link-active"  title="">Contact Us</a></li>
+          <li><a [routerLink]="['/aboutUs']" routerLinkActive="router-link-active"  title="">About Us</a></li> -->
+
+        </ul>
+      </nav><!-- Menus -->
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+<section>
+  <div class="block no-padding  gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="inner2">
+            <div class="inner-title2">
+              <h3>ContactUs</h3>
+              <span>Keep up to date with the latest news</span>
+            </div>
+            <div class="page-breacrumbs">
+              <ul class="breadcrumbs">
+                <li><a [routerLink]="['']" routerLinkActive="router-link-active"  title="">Home</a></li>
+                <!-- <li><a href="#" title="">P</a></li>
+                <li><a href="#" title="">Contact</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section>
+  <div class="block remove-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-map">
+            <div id="map_div">&nbsp;</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section>
+  <div class="block">
+    <div class="container">
+       <div class="row">
+         <div class="col-lg-4 column">
+           <!-- <div class="contact-form">
+             <h3>Keep In Touch</h3>
+             <form>
+               <div class="row">
+                 <div class="col-lg-12">
+                   <span class="pf-title">Full Name</span>
+                   <div class="pf-field">
+                     <input type="text" placeholder="ALi TUFAN" />
+                   </div>
+                 </div>
+                 <div class="col-lg-12">
+                   <span class="pf-title">Email</span>
+                   <div class="pf-field">
+                     <input type="text" placeholder="ALi TUFAN" />
+                   </div>
+                 </div>
+                 <div class="col-lg-12">
+                   <span class="pf-title">Subject</span>
+                   <div class="pf-field">
+                     <input type="text" placeholder="ALi TUFAN" />
+                   </div>
+                 </div>
+                 <div class="col-lg-12">
+                   <span class="pf-title">Message</span>
+                   <div class="pf-field">
+                     <textarea></textarea>
+                   </div>
+                 </div>
+                 <div class="col-lg-12">
+                   <button type="submit">Send</button>
+                 </div>
+               </div>
+             </form>
+           </div> -->
+         </div>
+         <div class="col-lg-8 column">
+           <div class="contact-textinfo style2">
+             <h3>Zaksy Vision Office(India)</h3>
+             <ul>
+               <li>Head Office</li>
+               <li><i class="la la-map-marker"></i><span>A-201 Maruti Towers, Shivranjani Cross roads, Satellite, Ahmedabad, Gujarat 380051 </span></li>
+               <li><i class="la la-phone"></i><span>+91-8141200284</span></li>
+               <!-- <li><i class="la la-fax"></i><span>Email : sales@zaksyvision.com</span></li> -->
+               <li><i class="la la-envelope-o"></i><span>Email : <a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adc4c3cbc2edc7c2cfc5d8c3d983cec2c0">[email&#160;protected]</a></span></li>
+             </ul>
+           </div>
+           &nbsp;
+           <div class="contact-textinfo style2">
+              <h3>Zaksy Vision Office(Germany)</h3>
+              <ul>
+                <li><i class="la la-map-marker"></i><span>Fritz-Meyer-Weg.55, 81925 München</span></li>
+                <!-- <li><i class="la la-phone"></i><span>+91-8141200284</span></li> -->
+                <!-- <li><i class="la la-fax"></i><span>Email : sales@zaksyvision.com</span></li> -->
+                <li><i class="la la-envelope-o"></i><span>Email : <a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adc4c3cbc2edc7c2cfc5d8c3d983cec2c0">[email&#160;protected]</a></span></li>
+              </ul>
+              <h3>Zaksy Vision Office(Canada)</h3>
+              <ul>
+                <li><i class="la la-map-marker"></i><span>207 King St S #2D, Waterloo, ON N2J 1R1, Canada </span></li>
+                <!-- <li><i class="la la-phone"></i><span>+91-8141200284</span></li> -->
+                <!-- <li><i class="la la-fax"></i><span>Email : sales@zaksyvision.com</span></li> -->
+                <li><i class="la la-envelope-o"></i><span>Email : <a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adc4c3cbc2edc7c2cfc5d8c3d983cec2c0">[email&#160;protected]</a></span></li>
+              </ul>
+            </div>
+
+
+        </div>
+
+        <!-- <div class="col-lg-6 column"> -->
+
+         <!-- </div> -->
+       </div>
+    </div>
+  </div>
+</section>
+
+
+
+<app-footer></app-footer>
+<!-- </div> -->

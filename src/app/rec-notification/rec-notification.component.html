@@ -34,7 +34,7 @@
                    &nbsp;
                    <p>Applied Date:  {{item.apply_date}}</p>
                  </div>
-                 <p>{{msg}}</p>>
+                 <p>{{msg}}</p>
                  <div class="action-resume" (click)="onAccept()">
                    <!-- <div class="action-center">
                      <span>Action <i class="la la-angle-down"></i></span>
@@ -46,11 +46,18 @@
                        <li><a href="#" title="">View Profile</a></li>
                      </ul>
                    </div> -->
+                   Accept
                    <mat-icon>done_outline</mat-icon>
+
                  </div>
-                 <div class="del-resume">
-                   <a  routerLinkActive="router-link-active"  title=""><i class="la la-trash-o"></i></a>
-                 </div>
+
+                    <div class="del-resume" (click)="onReject()">
+                      Reject
+                      <!-- <a  routerLinkActive="router-link-active"  title=""><i class="la la-trash-o"></i></a> -->
+                      <mat-icon>cancel</mat-icon>
+                    </div>
+
+
                </div><!-- Emply List -->
              </div>
            </div>
@@ -59,3 +66,5 @@
     </div>
   </div>
 </section>
+
+<app-footer></app-footer>

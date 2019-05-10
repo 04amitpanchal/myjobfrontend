@@ -6,6 +6,7 @@ export class Adminclass{
     public company_web?:string,
     public adderess?:string,
     public company_type?:string,
-    public rec_photo?:string
+    public rec_photo?:string,
+    public com_desc?:string
   ){}
 }

@@ -12,9 +12,7 @@ import { Adminclass } from '../classes/adminclass';
   styleUrls: ['./post-a-job.component.css']
 })
 export class PostAJobComponent implements OnInit {
-
-  da:Date;
-  fk_rec_id:string=localStorage.getItem('rec_id');
+   fk_rec_id:string=localStorage.getItem('rec_id');
   job_title:string;
   posted_date:string;
   skill_req:string;
@@ -26,6 +24,19 @@ export class PostAJobComponent implements OnInit {
   temp:number=10;
   fk_company_name:string;
   company_name:string;
+  job_field:string;
+  date:string;
+  month:string;
+  year:string;
+  x=new Date();
+
+  today = new Date();
+  dd = String(this.today.getDate()).padStart(2, '0');
+   mm = String(this.today.getMonth() + 1).padStart(2, '0'); //January is 0!
+   yyyy = this.today.getFullYear();
+
+
+
   constructor(
     private route:Router,
     private addJob:AddjobService,
@@ -36,7 +47,10 @@ export class PostAJobComponent implements OnInit {
   ngOnInit() {
     // text:this.temp;
     this.fk_rec_id=localStorage.getItem('rec_id');
-    this.company_name=localStorage.getItem('company_name');
+    // localStorage.setItem('date',Date.now());
+    // this.x=Date.now();
+    // this.company_name=localStorage.getItem('company_name');
+
     this.updaterec.getrecById(this.fk_rec_id).subscribe(
       (data:Adminclass[])=>{
          console.log(data);
@@ -54,12 +68,19 @@ export class PostAJobComponent implements OnInit {
   }
 
   onpost(){
-    this.posted_date="11-3-2019";
 
-    this.addJob.addJob(new addjob(this.fk_rec_id,this.job_title,this.posted_date,this.skill_req,this.job_desc,this.salary_min,this.salary_max,this.fk_company_name)).subscribe(
+    this.posted_date= this.mm + '/' + this.dd + '/' + this.yyyy;
+    // this.x=Date.now();
+    // this.date=this.x.getDate.toString();
+    // this.month=this.x.getMonth.toString();
+    // this.year=this.x.getFullYear.toString();
+    // this.posted_date=this.date+"/"+this.month+"/"+this.year;
+    // this.posted_date=
+    console.log(this.job_field);
+    this.addJob.addJob(new addjob(this.fk_rec_id,this.job_title,this.posted_date,this.skill_req,this.job_desc,this.salary_min,this.salary_max,this.job_field)).subscribe(
       (data:any)=>{
         alert("added");
-        this.route.navigate(['']);
+        this.route.navigate(['/recruiterprofile/1']);
         console.log(data);
       }
     );

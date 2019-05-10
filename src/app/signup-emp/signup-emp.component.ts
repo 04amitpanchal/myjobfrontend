@@ -53,7 +53,12 @@ city_list:string[]=[
    'Anand',
    'Anjar'
  ];
-;
+ Gender_list:string[]=[
+  'Male',
+  'Female',
+  'Other'
+];
+
 // department_list:string[]=["it","management"];
 // selected_country="option1";
 // selected_state="option1";
@@ -69,9 +74,10 @@ emp_photo:string;
 country_model_value:string;
 state_model_value:string;
 city_model_value:string;
-
+gender_model_value:string;
 // department_model_value:string;
 emp_field:string;
+emp_desc:string;
   constructor(private addEmp:AddEmpService,private _route:Router) { }
 
   ngOnInit() {
@@ -95,7 +101,7 @@ emp_field:string;
 
   onsignupemp()
   {
-    if(this.emp_id==null || this.emp_password==null || this.first_name==null || this.last_name==null || this.country_model_value==null || this.state_model_value==null || this.city_model_value==null || this.emp_field==null)
+    if(this.emp_id==null || this.emp_password==null || this.first_name==null || this.last_name==null || this.emp_desc==null || this.gender_model_value==null ||this.country_model_value==null || this.state_model_value==null || this.city_model_value==null || this.emp_field==null)
     {
     if(this.emp_photo==null){
       alert('choose image first');
@@ -111,11 +117,13 @@ emp_field:string;
     fd.append('emp_password',this.emp_password);
     fd.append('first_name',this.first_name);
     fd.append('last_name',this.last_name);
+    fd.append('Gender',this.gender_model_value);
     fd.append('country',this.country_model_value);
     fd.append('state',this.state_model_value);
     fd.append('city',this.city_model_value);
     fd.append('emp_field',this.emp_field);
     fd.append('image',this.selectedFile,this.selectedFile.name);
+    fd.append('emp_desc',this.emp_desc);
     console.log(fd);
     this.addEmp.addEmp(fd).subscribe(
       (data:any)=>{

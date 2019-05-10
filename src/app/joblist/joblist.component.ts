@@ -28,8 +28,9 @@ export class JoblistComponent implements OnInit {
   goToCompanyProfile(company)
   {
     // alert(company);
-    localStorage.setItem('company_profile',company);
-    this._route.navigate(['recruiterprofile',0]);
+    localStorage.setItem('rec_profile',company);
+    // this._route.navigate(['recruiterprofile',0]);
+    this._route.navigate(['recprofileforvisitor']);
   }
 
 }

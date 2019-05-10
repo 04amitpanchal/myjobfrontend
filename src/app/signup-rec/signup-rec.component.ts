@@ -41,6 +41,7 @@ export class SignupRecComponent implements OnInit {
    company_type:string;
 
   selectedFile:File=null;
+  com_desc:string;
   constructor(private addrec:AddrecService,private _route:Router) { }
 
   ngOnInit() {
@@ -53,9 +54,9 @@ export class SignupRecComponent implements OnInit {
 
   onsignuprec()
       {
-        if(this.rec_id==null || this.password==null ||this.company_type==null || this.company_web==null || this.rec_photo==null)
-        {
-          alert("form can not be null");
+        // if(this.rec_id==null || this.password==null ||this.company_type==null || this.company_web==null || this.rec_photo==null)
+        // {
+        //   alert("form can not be null");
 
         if(this.rec_id==null)
         {
@@ -81,7 +82,7 @@ export class SignupRecComponent implements OnInit {
         {
           alert("rec_photo can not be null");
         }
-      }
+      // }
         // if(this.rec_photo==null){
         //   alert('choose image first');
         // }
@@ -91,16 +92,18 @@ export class SignupRecComponent implements OnInit {
         const fd=new FormData();
         // this.id=this._aroute.snapshot.params['id'];
         // alert(this.id);
-
-        fd.append('company_name',this.company_name);
-        fd.append('password',this.password);
-        fd.append('company_web',this.company_web);
         fd.append('rec_id',this.rec_id);
+        fd.append('password',this.password);
+        fd.append('company_name',this.company_name);
+
+        fd.append('company_web',this.company_web);
+
 
 
         fd.append('adderess',this.adderess);
         fd.append('company_type',this.company_type);
         fd.append('image',this.selectedFile,this.selectedFile.name);
+        fd.append('com_desc',this.com_desc);
         console.log(fd);
         this.addrec.addrec(fd).subscribe(
           (data:any)=>{

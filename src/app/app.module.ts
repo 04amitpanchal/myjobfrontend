@@ -56,6 +56,17 @@ import { RecPostedJobForEmpComponent } from './rec-posted-job-for-emp/rec-posted
 import { EmpNotificationComponent } from './emp-notification/emp-notification.component';
 import { HeaderForVisitorComponent } from './header-for-visitor/header-for-visitor.component';
 import { JobSingleComponent } from './job-single/job-single.component';
+import { CompanyPostedJobsComponent } from './company-posted-jobs/company-posted-jobs.component';
+import { AppliedJobsComponent } from './applied-jobs/applied-jobs.component';
+import { RecProfileForVisitorComponent } from './rec-profile-for-visitor/rec-profile-for-visitor.component';
+import { CandidateForRecComponent } from './candidate-for-rec/candidate-for-rec.component';
+import { EmpProfileRecComponent } from './emp-profile-rec/emp-profile-rec.component';
+import { EmpProfileForVisitorComponent } from './emp-profile-for-visitor/emp-profile-for-visitor.component';
+import { ContactusForRecComponent } from './contactus-for-rec/contactus-for-rec.component';
+import { ContactusForEmpComponent } from './contactus-for-emp/contactus-for-emp.component';
+import { RelatedCandidatesForRecComponent } from './related-candidates-for-rec/related-candidates-for-rec.component';
+import { JobsForEmpComponent } from './jobs-for-emp/jobs-for-emp.component';
+import { UploadCvComponent } from './upload-cv/upload-cv.component';
 // import { HttpClient } from 'selenium-webdriver/http';
 @NgModule({
   declarations: [
@@ -104,7 +115,18 @@ import { JobSingleComponent } from './job-single/job-single.component';
     RecPostedJobForEmpComponent,
     EmpNotificationComponent,
     HeaderForVisitorComponent,
-    JobSingleComponent
+    JobSingleComponent,
+    CompanyPostedJobsComponent,
+    AppliedJobsComponent,
+    RecProfileForVisitorComponent,
+    CandidateForRecComponent,
+    EmpProfileRecComponent,
+    EmpProfileForVisitorComponent,
+    ContactusForRecComponent,
+    ContactusForEmpComponent,
+    RelatedCandidatesForRecComponent,
+    JobsForEmpComponent,
+    UploadCvComponent
 
   ],
   imports: [

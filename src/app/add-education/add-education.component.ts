@@ -50,12 +50,12 @@ public firstname:string;public lastname:string;
 AddEducationDetails()
   {
     alert(localStorage.getItem('emp_id'));
-    if(this.edu_id==null || this.emp_qual==null || this.emp_uni==null || this.emp_skill2==null || this.emp_skill1==null || this.emp_pass_year==null || this.emp_exp==null )
-    {
-      alert("Field Can not be Null");
-    }
-    else
-    {
+    // if(this.edu_id==null || this.emp_qual==null || this.emp_uni==null || this.emp_skill2==null || this.emp_skill1==null || this.emp_pass_year==null || this.emp_exp==null )
+    // {
+    //   alert("Field Can not be Null");
+    // }
+    // else
+    // {
     this.addEducation.addEducation(new EducationClass(this.edu_id,localStorage.getItem('emp_id'),this.emp_qual,this.emp_pass_year,this.emp_uni,this.emp_exp,this.emp_skill1,this.emp_skill2)).subscribe(
       (data:EducationClass)=>{
         console.log(data);
@@ -67,4 +67,4 @@ AddEducationDetails()
 
   }
 
-}
+// }

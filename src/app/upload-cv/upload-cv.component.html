@@ -1,0 +1,124 @@
+<app-emp-header></app-emp-header>
+<section class="overlape">
+  <div class="block no-padding">
+    <div data-velocity="-.1" style="background: url(../../../../assets/uitemplate/images/resource/mslider1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax"></div><!-- PARALLAX BACKGROUND IMAGE -->
+    <div class="container fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="inner-header wform">
+            <div class="job-search-sec">
+
+               <!-- <div class="job-search"> -->
+                  <h4 align="center" style="font-size: 50px; color: white;"> Upload C.V.</h4>
+                  &nbsp;
+               <!-- <h4>Explore Thousand Of Jobs With Just Simple Search...</h4>
+                <form>
+                  <div class="row">
+                    <div class="col-lg-7">
+                      <div class="job-field">
+                        <input type="text" placeholder="Job title, keywords or company name" />
+                        <i class="la la-keyboard-o"></i>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="job-field">
+                        <select data-placeholder="City, province or region" class="chosen-city">
+                          <option>Instambul</option>
+                          <option>New York</option>
+                          <option>London</option>
+                          <option>Russia</option>
+                        </select>
+                        <i class="la la-map-marker"></i>
+                      </div>
+                    </div>
+                    <div class="col-lg-1">
+                      <button type="submit"><i class="la la-search"></i></button>
+                    </div>
+                  </div>
+                </form>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+&nbsp;
+<h1>Upload C.V.</h1>
+<div class="col-lg-12">
+  <!-- <p>Max file size is 1MB, Minimum dimension: 270x210 And Suitable files are .jpg & .png</p> -->
+  <div class="upload-portfolio">
+    <div class="uploadbox">
+      <label for="file-upload" class="custom-file-upload">
+         <i class="la la-cloud-upload"></i> <span>Upload C.V.</span>
+     </label>
+     <input id="file-upload" (change)="onChange($event)" [(ngModel)]="emp_cv" type="file" style="display: none;" />
+    </div>
+  </div>
+</div>
+<button  class="signup" (click)="onUpload()">Upload C.v.</button>
+<button style="float: left;" class="signup" (click)="onDownloadPDF()">
+  Create C.V.
+</button>
+<div id="content" #content style="visibility: hidden;display: none;">
+  <div >
+      <h2  style="margin-left:550px;">
+          <b>Name:-</b>{{first_name}} &nbsp; {{last_name}}
+      </h2>
+      <h1>Education Information:</h1>
+      <p >
+          <b>Degree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</b> {{emp_qual}}
+      </p>
+      <p >
+          <b>University&nbsp;&nbsp;&nbsp;&nbsp;:-</b> {{emp_uni}}
+      </p>
+      <p >
+          <b>Passing Year:-</b> {{emp_pass_year}}
+      </p>
+      <h1>Personal Information:</h1>
+      <p >
+          <b>Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</b> {{Gender}}
+      </p>
+      <p >
+          <b>Country&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</b> {{country}}
+      </p>
+      <p>
+          <b>State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</b> {{state}}
+      </p>
+      <p >
+          <b>City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</b> {{city}}
+      </p>
+      <p >
+      <p >
+          <b>Field&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</b> {{emp_field}}
+      </p>
+      <h1>Personal Skills:</h1>
+      <p>
+
+          <b>About Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</b> {{emp_desc}}
+      </p>
+
+      <p >
+          <!-- {{emp_exp}} -->
+      </p>
+      <!-- <hr> -->
+      <p >
+          <b>Skills&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-</b> {{emp_skill1}}
+      </p>
+      <p >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{emp_skill2}}
+      </p>
+      <div id="degree" style="color: yellow">
+          <b> </b>
+      </div>
+  </div>
+</div>
+
+  <!-- Note:- If you are a Fresher You Can Create Your C.V. -->
+
+
+
+
+
+<app-footer></app-footer>

@@ -20,8 +20,8 @@ export class EmpFieldWiseCompanyComponent implements OnInit {
 
   ngOnInit() {
     // this.getallRecruiterObj.getAllRecruiter(new Adminclass(localStorage.getItem('company_type')))
-    alert(localStorage.getItem('emp_field'));
-    this.getallRecruiterObj.getSpecificRec(localStorage.getItem('emp_field')).subscribe(
+    alert(localStorage.getItem('emp_field1'));
+    this.getallRecruiterObj.getSpecificRec(localStorage.getItem('emp_field1')).subscribe(
       (data:any)=>{
         console.log(data);
         this.getAllrecruiter=data;
